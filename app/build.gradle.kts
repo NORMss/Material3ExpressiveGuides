@@ -40,9 +40,7 @@ android {
 
 kotlin {
     compilerOptions {
-        compilerOptions {
-            optIn.add("kotlin.RequiresOptIn")
-        }
+        jvmToolchain(17)
     }
 }
 
