@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.annotation.RawRes
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -14,6 +15,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import ru.normno.material3expressiveguides.buttons.FunMenu
 import ru.normno.material3expressiveguides.buttons.MultiChoiceButtonsGroup
 import ru.normno.material3expressiveguides.buttons.SingleChoiceButtonsGroup
 import ru.normno.material3expressiveguides.ui.theme.Material3ExpressiveGuidesTheme
@@ -24,7 +26,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Material3ExpressiveGuidesTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    floatingActionButton = {
+                        FunMenu()
+                    },
+                    ) { innerPadding ->
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
